@@ -1,0 +1,91 @@
+header {
+	position: relative;
+	left: 0;
+	top: 0;
+	padding-top: 20px;
+
+	display: flex;
+	justify-content: center;
+	font-family: 'dogica';
+	font-size: 0.7rem;
+
+	width: 100%;
+}
+
+header nav {
+	--shift: 0;
+	position: relative;
+	display: flex;
+	align-items: center;
+	background-color: var(--main-color);
+	border-radius: 0.7em;
+	transition: all 0.3s ease;
+}
+
+
+header nav::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: calc(var(--shift) * 5em);
+	background-color: var(--darker-color);
+	width: calc(100% - 3*5em);
+	height: 100%;
+	border-radius: 0.7em;
+	transition: all 0.3s ease;
+}
+
+header nav a {
+	color: var(--lighter-color);
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 5em;
+	height: 4em;
+	text-decoration: none;
+}
+
+header nav span {
+	width: 0;
+	visibility: hidden;
+	font-weight: bold;
+}
+
+header nav a:hover {
+	color: var(--light-color);
+}
+
+header nav a:hover svg {
+	fill: var(--light-color);
+}
+
+header nav a svg {
+	width: 1.6em;
+	fill: var(--lighter-color);
+}
+
+header nav a.active {
+	width: auto;
+	padding: 0 1.7em;
+}
+
+header nav a.active span {
+	width: auto;
+	visibility: visible;
+	padding-left: 10px;
+}
+
+header .deactivated::before {
+	width: 0;
+	visibility: hidden;
+}
+
+@media (max-width: 1000px) {
+	header nav a.active span {
+		width: 0;
+		visibility: hidden;
+		padding-left: 0;
+	}
+}

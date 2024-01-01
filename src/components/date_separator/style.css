@@ -1,0 +1,13 @@
+.date-separator {
+	display: inline-flex;
+	width: 100%;
+	color: var(--dark-color);
+	font-size: large;
+}
+
+.date-separator hr {
+	margin-left: 10px;
+	width: 100%;
+	border: 0;
+	border-top: 1px solid var(--dark-color);
+}

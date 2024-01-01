@@ -1,0 +1,100 @@
+@font-face {
+	font-family: 'dogica';
+	src: url(/fonts/dogica.ttf);
+}
+
+html {
+	--lighter-color: #F2F2F2;
+	--light-color: #E0E0E0;
+	--main-color: #BDBDBD;
+	--dark-color: #828282;
+	--darker-color: #4F4F4F;
+	--flash-color: #4F4F4F;
+}
+
+html[data-theme="orange"] {
+	--lighter-color: #FFEDD2;
+	--light-color: #F9CD8B;
+	--main-color: #EEC07B;
+	--dark-color: #DEAD65;
+	--darker-color: #CAA46D;
+	--flash-color: #CAA46D;
+}
+
+html[data-theme="blue"] {
+	--lighter-color: #EBF7FE;
+	--light-color: #D8ECFF;
+	--main-color: #AFCDEC;
+	--dark-color: #85ADD9;
+	--darker-color: #719dcf;
+	--flash-color: #8BB2DE;
+}
+
+html[data-theme="green"] {
+	--lighter-color: #E6FFD0;
+	--light-color: #D4F6B6;
+	--main-color: #C1E99E;
+	--dark-color: #8CC170;
+	--darker-color: #7EAC6C;
+	--flash-color: #7C9B70;
+}
+
+html[data-theme="purple"] {
+	--lighter-color: #F7F0FD;
+	--light-color: #E9D6FB;
+	--main-color: #D9B7F8;
+	--dark-color: #C296EA;
+	--darker-color: #BC80F4;
+	--flash-color: #8400FF;
+}
+
+:root {
+	font-family: 'Helvetica Neue', arial, sans-serif;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	background: var(--lighter-color);
+	color: var(--lighter-color);
+	transition: all 0.3s ease;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	background-size: 40px 40px;
+}
+
+a {
+	color: var(--lighter-color);
+}
+
+#app>main {
+	display: flex;
+	margin: 3em auto;
+	max-width: 1280px;
+	justify-content: center;
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+}
+
+.tags li {
+	list-style-type: none;
+	margin: 0 0.3rem 0.3rem 0;
+	border-radius: 0.5rem;
+	padding: 0.3rem 0.5rem;
+	border: 1.5px solid var(--lighter-color);
+	font-size: smaller;
+	font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+	#app>main {
+		margin: 0 2rem;
+	}
+}

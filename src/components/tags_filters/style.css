@@ -1,0 +1,28 @@
+.tags_filter {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	padding: 0 1em;
+	background-color: var(--darker-color);
+	border-radius: 1rem;
+	height: fit-content;
+}
+
+.tags_filter .separator {
+	width: 100%;
+	height: 1px;
+	background: var(--lighter-color);
+}
+
+.tags_filter .active {
+	background: var(--lighter-color);
+	color: var(--darker-color);
+}
+
+@media (max-width: 1000px) {
+	.tags_filter {
+		margin-top: 3em;
+		flex: unset;
+		width: calc(100% - 1em + 2px);
+	}
+}

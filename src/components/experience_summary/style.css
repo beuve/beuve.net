@@ -1,0 +1,45 @@
+.experience-summary {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	padding: 0.5rem 0 0.5rem 1rem;
+}
+
+.experience-summary::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 2px;
+	background-color: var(--lighter-color);
+}
+
+.experience-summary .infos {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+	gap: 0.5rem 1rem;
+}
+
+.experience-summary h3 {
+	margin: 0;
+}
+
+.experience-summary .tags {
+	margin: 0;
+}
+
+.experience-summary .infos li {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+.experience-summary .infos svg {
+	fill: var(--lighter-color);
+}

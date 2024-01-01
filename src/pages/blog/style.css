@@ -1,0 +1,33 @@
+.blog {
+	margin: 0 50px;
+	display: flex;
+	text-align: center;
+	flex-direction: row-reverse;
+	gap: 2em;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.blog .article-list {
+	flex: 3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+}
+
+@media (max-width: 1000px) {
+	.blog {
+		margin: 0;
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
+}
+
+@media (min-width: 1600px) {
+	.blog {
+		position: relative;
+		left: 12.5%;
+	}
+}
